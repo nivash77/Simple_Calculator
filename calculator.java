@@ -1,10 +1,11 @@
 import java.util.*;
-//create a calculator class for Arithmetic Operations
+//create a calculator class for Arithmetic Operations ,fahrenheit,Celsius and squareroot
 class Calculator{
     int a,b;
     float a1,b1;
     char op;
     int turn;
+    //set value for arithmetic operations numbers and characters
     void setValue(String str,String str1,char op){
         if(str.contains(".")||str1.contains(".")){
             this.a1=Float.valueOf(str);
@@ -19,9 +20,11 @@ class Calculator{
             turn=0;
         }
     }
+    // reset the character or operator
     void resetOperator(char ch){
         this.op=ch;
     }
+    //Arithmetic operations method
     void ArithmeticOperations(){
         switch(op){
             case '+':
@@ -123,11 +126,13 @@ class Currency{
         System.out.println();
     }
 }
+//main class
 public class Main{
     public static void main(String[] args){
         Scanner s=new Scanner(System.in);
         Calculator obj=new Calculator();
         boolean times=true;
+        // repeat until the enter 0
         while(times){
             System.out.println("YOU Need Calculator enter 1");
             System.out.println("You need to exit enter 0");
